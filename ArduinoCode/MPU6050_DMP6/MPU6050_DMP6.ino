@@ -119,7 +119,7 @@ MPU6050 mpu;
 
 
 
-#define INTERRUPT_PIN D6  // use pin D5 on nodeMCU
+#define INTERRUPT_PIN 2  // use pin D5 on nodeMCU
 #define LED_PIN 13 // (Arduino is 13, Teensy is 11, Teensy++ is 6)
 bool blinkState = false;
 
@@ -150,7 +150,7 @@ uint8_t teapotPacket[14] = { '$', 0x02, 0,0, 0,0, 0,0, 0,0, 0x00, 0x00, '\r', '\
 // ================================================================
 
 volatile bool mpuInterrupt = false;     // indicates whether MPU interrupt pin has gone high
-void ICACHE_RAM_ATTR dmpDataReady() {
+void dmpDataReady() {
     mpuInterrupt = true;
 }
 
