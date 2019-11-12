@@ -133,6 +133,7 @@ void setup() {
   println("HAVE A LOOK AT THE LIST ABOVE AND SET THE RIGHT SERIAL PORT NUMBER IN THE CODE!");
   println("  -> Using port " + SERIAL_PORT_NUM + ": " + portName);
   serial = new Serial(this, portName, SERIAL_PORT_BAUD_RATE); 
+  //serial = new Serial(this, "/dev/cu.usbmodem143101", SERIAL_PORT_BAUD_RATE); 
 }
 
 void setupRazor() {
